@@ -1,0 +1,13 @@
+﻿<div data-ng-controller="clientsController as clients">
+    <h2 class="page-header">Nuestros clientes</h2>
+    <div loading-container="clients.tableParams.settings().$loading">
+        <table data-ng-table="clients.tableParams" class="table table-condensed table-bordered table-striped">
+            <tr data-ng-repeat="client in $data">
+                <td data-title="'Nombre'">{{client.email}}</td>
+                <td data-title="'Email'">
+                    <a target="_self" data-ng-href="#/clients/{{client.userName}}">{{client.userName}}</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
